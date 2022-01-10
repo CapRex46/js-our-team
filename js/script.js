@@ -32,9 +32,21 @@ const team = [
   ];
   
 
-for (let k in team) {
-    console.log(k, team[k])
-    const output = `${k}: ${team[k]} <br/>`
-    console.log(output)
-}
+  const containerHtml = document.querySelector('.team-container');
 
+for (let i = 0; i < team.length; i++) {
+
+  containerHtml.innerHTML += 
+  `
+  <div class="team-card">
+    <div class="card-image">
+      <img src="./img/${team[i].image}" alt="member profile"/>
+    </div>
+    <div class="card-text">
+      <h3>${team[i].name}</h3>
+      <p>${team[i].role}</p>
+    </div>
+  </div>  
+  `
+
+}
