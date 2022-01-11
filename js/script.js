@@ -31,14 +31,13 @@ const team = [
     },
   ];
   
-
-  const containerHtml = document.querySelector('.team-container');
+// seleziono il primo .team-container
+const containerHtml = document.querySelector('.team-container');
 
 for (let i = 0; i < team.length; i++) {
-
-  containerHtml.innerHTML += 
-  `
-  <div class="team-card">
+// aggiungo tramite un ciclo for le linee di codice neccessarie all'html
+ containerHtml.innerHTML += 
+  `<div class="team-card">
     <div class="card-image">
       <img src="./img/${team[i].image}" alt="member profile"/>
     </div>
@@ -46,7 +45,5 @@ for (let i = 0; i < team.length; i++) {
       <h3>${team[i].name}</h3>
       <p>${team[i].role}</p>
     </div>
-  </div>  
-  `
-
+  </div>`
 }
